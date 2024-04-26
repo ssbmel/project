@@ -1,0 +1,106 @@
+/* 타이틀 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=Hahmlet:wght@100..900&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR&family=Song+Myung&display=swap');
+
+/* 영화 줄거리 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=Hahmlet:wght@100..900&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR&family=Reddit+Mono:wght@200..900&family=Song+Myung&display=swap');
+
+/* 폼태그 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Gowun+Dodum&family=Hahmlet:wght@100..900&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR&family=Reddit+Mono:wght@200..900&family=Song+Myung&display=swap');
+
+
+body {
+  background-image: url(/img/배경.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.title {
+  font-size: 100px;
+  -webkit-text-stroke: 3px black;
+  color: beige;
+  text-align: center;
+  height: 200px;
+  padding-top: 100px;
+
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+form {
+  text-align: center;
+  margin: 50px auto;
+
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 30px;
+}
+
+button {
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  height: 30px;
+  background-color: black;
+  color: beige;
+  cursor: pointer;
+}
+
+span {
+  color: beige;
+  -webkit-text-stroke: 1px black;
+}
+
+input {
+  border: 0;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+section {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.cardBox {
+  background-color: blanchedalmond;
+  border: 3px solid rgb(48, 46, 43);
+  border-radius: 10px;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px 20px;
+}
+
+.cardBox > img {
+  width: 250px;
+  height: auto;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
