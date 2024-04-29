@@ -9,7 +9,7 @@
 
 
 body {
-  background-image: url(배경.jpg);
+  background-image: url(./배경.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -85,6 +85,7 @@ section {
   height: 550px;
   margin: 50px auto;
   perspective: 1100px;
+  cursor: pointer;
 }
 
 .cardBox > img {

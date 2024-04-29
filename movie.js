@@ -17,7 +17,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
     //html에 들어갈 영화 카드 탬플릿 + 검색 값 세팅 
     function movieList(val = "") {
       movieCard.innerHTML = movieData.map((data) => {
-        if(data.title.toLowerCase().includes(val)) {
+        if(data.title.toLowerCase().includes(val.toLowerCase())) {
           return`
           <div class="cardBox" onclick="alertCard(${data.id})">
               <div class="flip">
