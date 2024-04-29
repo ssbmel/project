@@ -81,12 +81,10 @@ section {
 }
 
 .cardBox {
-  background-color: blanchedalmond;
-  border: 3px solid rgb(48, 46, 43);
-  border-radius: 10px;
-  width: 300px;
+  width: 350px;
+  height: 550px;
   margin: 50px auto;
-  padding: 20px 20px;
+  perspective: 1100px;
 }
 
 .cardBox > img {
@@ -94,13 +92,59 @@ section {
   height: auto;
 }
 
+.flip {
+  width: 100%; 
+  height: 100%;
+  padding-top: 20px;
+  position: relative;
+  transition: .4s;
+  transform-style: preserve-3d;
+
+  background-color: blanchedalmond;
+  border: 3px solid rgb(48, 46, 43);
+  border-radius: 10px;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+.back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: block;
+  height: 10px;
+  padding-right: 10px;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 160, 100, 0.852);
+  height: 20px;
+}
+
+
+.cardBox:hover .flip {
+  transform: rotateY(180deg);
+}
+
 h3 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 p {
   font-family: "Nanum Pen Script", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 25px;
+  font-size: 35px;
+  padding: 10px 20px;
 }
+

@@ -19,11 +19,17 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
       movieCard.innerHTML = movieData.map((data) => {
         if(data.title.toLowerCase().includes(val)) {
           return`
-          <div class="cardBox" onclick="card(${data.id})">
-            <img src='https://image.tmdb.org/t/p/w300${data.poster_path}' alt="${data.original_title}">
-              <h3>${data.original_title}</h3>
-              <p>${data.overview}</p>
-              <p>평점 : ${data.vote_average}</p>
+          <div class="cardBox" onclick="alertCard(${data.id})">
+              <div class="flip">
+                <div class="front">
+                <img src='https://image.tmdb.org/t/p/w300${data.poster_path}' alt="${data.original_title}">
+                <h3>${data.original_title}</h3>
+                </div>
+                <div class="back">
+                <p>${data.overview}</p>
+                <p>평점 : ${data.vote_average}</p>
+                </div>
+              </div>    
           </div>`;
         }
       })
@@ -43,6 +49,6 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
 })
 
 
-  function card(id) {
+  function alertCard(id) {
     alert(`영화 ID : ${id}`);
   }
