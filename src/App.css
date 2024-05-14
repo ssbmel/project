@@ -1,7 +1,35 @@
+body {
+  background-image: url(../public/bgcat.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 input {
   width: 200px;
   height: 30px;
   margin: 10px;
+  background-color: blanchedalmond;
+}
+
+.createBtn {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  background-color: orange;
+  color: black;
+  border: 2px solid black;
+  font-size: 25px;
+}
+
+button {
+  margin: 5px;
+  width: 50px;
+  height: 25px;
+  background-color: orange;
+  border: none;
+  color: white;
 }
 
 .inputText {
@@ -12,13 +40,25 @@ input {
 }
 
 .styleBox {
-  width: 70%;
-  height: 400px;
-  border: 3px solid gray;
+  width: 1000px;
+  height: 350px;
+  border: 3px solid orange;
   border-radius: 10px;
   margin: 30px auto;
   padding: 20px;
   box-sizing: border-box;
   display: grid;
+  overflow-x: auto;
+  background-color: blanchedalmond;
 }
 
+.miniBox {
+  width: 200px;
+  height: 150px;
+  border: 3px solid orange;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: beige;
+}
