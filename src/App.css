@@ -4,7 +4,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
 }
+
 
 input {
   width: 200px;
@@ -20,7 +26,9 @@ input {
   background-color: orange;
   color: black;
   border: 2px solid black;
+  border-radius: 5px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 button {
@@ -29,7 +37,9 @@ button {
   height: 25px;
   background-color: orange;
   border: none;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
 .inputText {
@@ -42,14 +52,36 @@ button {
 .styleBox {
   width: 1000px;
   height: 350px;
-  border: 3px solid orange;
+  border: 5px solid orange;
   border-radius: 10px;
   margin: 30px auto;
   padding: 20px;
   box-sizing: border-box;
-  display: grid;
+  display: grid; 
+  background-color:rgba(250, 232, 184, 0.87);
   overflow-x: auto;
-  background-color: blanchedalmond;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤 바의 너비 */
+  height: 8px; /* 스크롤 바의 높이 */
+  background-color: #f0f0f0; /* 스크롤 바의 배경색 */
+}
+
+/* 스크롤 바의 색상 지정 */
+::-webkit-scrollbar-thumb {
+  background-color: #ff8800; /* 스크롤 바의 색상 */
+}
+
+/* 스크롤 바 호버 시 색상 지정 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff6200; /* 스크롤 바의 색상 */
+}
+
+h2 {
+  position: fixed;
+  top: auto;
+  left: auto;
 }
 
 .miniBox {
@@ -59,6 +91,7 @@ button {
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
+  margin-top: 80px;
   text-align: center;
-  background-color: beige;
+  background-color: blanchedalmond; 
 }

@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <div className='inputText'>
-        <h1>To Do List</h1>
+        <p style={{fontSize: "60px"}}>To Do List</p>
         <div>
           할일
           <input 
@@ -84,7 +84,7 @@ function App() {
       </div>
 
       <div className="styleBox">
-        <h2>진행중</h2>
+        <h2>WORKING</h2>
           <div style={{display: "flex"}}>
           {contents.filter((content) => !content.isDone).map(function (content) {
             return (
@@ -98,7 +98,7 @@ function App() {
           </div>
       </div>
       <div className="styleBox">
-        <h2>완료</h2>
+        <h2>DONE</h2>
         <div style={{display: "flex"}} >
         {contents.filter((content) => content.isDone).map(function (content) {
           return (
