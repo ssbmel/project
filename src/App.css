@@ -57,9 +57,8 @@ button {
   margin: 30px auto;
   padding: 20px;
   box-sizing: border-box;
-  display: grid; 
   background-color:rgba(250, 232, 184, 0.87);
-  overflow-x: auto;
+  display: grid;
 }
 
 ::-webkit-scrollbar {
@@ -78,10 +77,9 @@ button {
   background-color: #ff6200; /* 스크롤 바의 색상 */
 }
 
-h2 {
-  position: fixed;
-  top: auto;
-  left: auto;
+.scrollBox{
+  overflow-x: auto;
+  display: grid;
 }
 
 .miniBox {
@@ -91,7 +89,6 @@ h2 {
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
-  margin-top: 80px;
   text-align: center;
   background-color: blanchedalmond; 
 }

@@ -83,33 +83,37 @@ function App() {
           onClick={addTextHandler}>추가</button>
       </div>
 
-      <div className="styleBox">
+      <div className="styleBox">     
         <h2>WORKING</h2>
-          <div style={{display: "flex"}}>
-          {contents.filter((content) => !content.isDone).map(function (content) {
-            return (
-              <Content 
-              key={content.id} 
-              content={content}
-              deleteTextHandler={deleteTextHandler}
-              toggleIsDone={toggleIsDone} 
-              />);
-            })}
+          <div className='scrollBox'>
+            <div style={{display: "flex"}}>
+            {contents.filter((content) => !content.isDone).map(function (content) {
+              return (
+                <Content 
+                key={content.id} 
+                content={content}
+                deleteTextHandler={deleteTextHandler}
+                toggleIsDone={toggleIsDone} 
+                />);
+              })}
+            </div>
           </div>
       </div>
       <div className="styleBox">
         <h2>DONE</h2>
-        <div style={{display: "flex"}} >
-        {contents.filter((content) => content.isDone).map(function (content) {
-          return (
-            <Content 
-            key={content.id} 
-            content={content}
-            deleteTextHandler={deleteTextHandler}
-            toggleIsDone={toggleIsDone}
-            /> );
-          })}
-          </div>
+          <div className='scrollBox'>
+            <div style={{display: "flex"}} >
+            {contents.filter((content) => content.isDone).map(function (content) {
+              return (
+                <Content 
+                key={content.id} 
+                content={content}
+                deleteTextHandler={deleteTextHandler}
+                toggleIsDone={toggleIsDone}
+                /> );
+              })}
+            </div>
+        </div>
       </div>
     </>
   );
@@ -122,6 +126,7 @@ const Content = ({content, deleteTextHandler, toggleIsDone}) => {
   const {title, text, id, isDone} = content;
 
   return (
+
         <div className="miniBox">
           <h3>{title}</h3>
           <p>{text}</p>
