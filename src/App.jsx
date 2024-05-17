@@ -34,7 +34,7 @@ function App() {
       isDone: false,
     };
     setContents([...contents, newContent]);
-    setText
+    setText("");
     setTitle("");
   }
 
