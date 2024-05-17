@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
 import './App.css'
+import Content from './Content';
 
 function App() {
   const [contents, setContents] = useState([
@@ -33,7 +34,7 @@ function App() {
       isDone: false,
     };
     setContents([...contents, newContent]);
-    setText("");
+    setText
     setTitle("");
   }
 
@@ -121,18 +122,3 @@ function App() {
 
 export default App;
 
-const Content = ({content, deleteTextHandler, toggleIsDone}) => {
-
-  const {title, text, id, isDone} = content;
-
-  return (
-
-        <div className="miniBox">
-          <h3>{title}</h3>
-          <p>{text}</p>
-          <button onClick={() => deleteTextHandler(id)}>삭제</button>
-          <button onClick={() => toggleIsDone(id)}>{isDone ? "취소" : "완료"}</button>
-        </div>
-  );
-
-};
